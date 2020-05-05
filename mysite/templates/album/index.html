@@ -1,0 +1,495 @@
+{% extends "home.html" %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'polls/bootstrap/album/album.css' %}">{% endblock %}
+
+{% block hola %}
+<body>
+<!--
+---
+layout: examples
+title: Album example
+extra_css: "album.css"
+---
+-->
+<header>
+    <div class="collapse bg-dark" id="navbarHeader">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-md-7 py-4">
+                    <h4 class="text-white">About</h4>
+                    <p class="text-muted">Add some information about the album below, the author, or any other
+                        background context. Make it a few sentences long so folks can pick up some informative tidbits.
+                        Then, link them off to some social networking sites or contact information.</p>
+                </div>
+                <div class="col-sm-4 offset-md-1 py-4">
+                    <h4 class="text-white">Contact</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Follow on Twitter</a></li>
+                        <li><a href="#" class="text-white">Like on Facebook</a></li>
+                        <li><a href="#" class="text-white">Email me</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container d-flex justify-content-between">
+            <a href="{% url 'polls:cover' %}" class="navbar-brand d-flex align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
+                     stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="mr-2"
+                     viewBox="0 0 24 24" focusable="false">
+                    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+                    <circle cx="12" cy="13" r="4"/>
+                </svg>
+                <strong>Automation</strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"
+                    aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<main role="main">
+
+    <section class="jumbotron text-center">
+        <div class="container">
+            <h1>Integracion de tecnologias TOP</h1>
+            <p class="lead text-muted">Lo logramos a traves de la integracion de diversas tecnologias en el mundo de la
+                mecanica, electronica software en combinacion de ciencias naturales como mecanica, fisica y control. A
+                continuacion las herramientas que usamos.</p>
+            <p>
+                <a href="{% url 'polls:cover' %}" class="btn btn-primary my-2">Main call to action</a>
+                <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+            </p>
+        </div>
+    </section>
+
+    <div class="album py-5 bg-light">
+        <div class="container">
+            <h1>Ciencias basicas</h1>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="{% static 'polls/images/physics.jpg' %}" width="100%" height="225"
+                             class="card-img-top">
+
+                        <div class="card-body">
+                            <p class="card-text">
+                                <a href="#">La física</a> es la ciencia natural que estudia los componentes
+                                fundamentales del
+                                Universo, la energía, la materia, el espacio-tiempo y las interacciones
+                                fundamentales. La física es una ciencia básica estrechamente vinculada
+                                con las matemáticas y la lógica en la formulación y cuantificación de sus
+                                principios.
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div>
+                                <small class="text-muted">9 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="{% static 'polls/images/math.jpg' %}" width="100%" height="225" class="card-img-top">
+
+                        <div class="card-body">
+                            <p class="card-text">
+                                <a href="#">La matemática</a> es una ciencia formal que, partiendo de axiomas y
+                                siguiendo el razonamiento lógico, estudia las propiedades y relaciones entre entidades
+                                abstractas como números, figuras geométricas, iconos, glifos, o símbolos en general.
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div>
+                                <small class="text-muted">9 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="{% static 'polls/images/probability.jpg' %}" width="100%" height="225"
+                             class="card-img-top">
+                        <div class="card-body">
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div>
+                                <small class="text-muted">9 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="{% static 'polls/images/control.png' %}" width="100%" height="225"
+                             class="card-img-top">
+
+                        <div class="card-body">
+                            <p class="card-text"><a href="#">La teoría del control</a> es un campo interdisciplinario de
+                                la
+                                ingeniería y
+                                las matemáticas, que tiene que ver con el comportamiento de sistemas dinámicos.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div>
+                                <small class="text-muted">9 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h1>Sotware</h1>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="{% static 'polls/images/ros.png' %}" width="100%" height="225" class="card-img-top">
+
+                        <div class="card-body">
+                            <p class="card-text">
+                                <a href="https://www.ros.org/">ROS</a>
+                                es un framework para el desarrollo de software para robots que provee la funcionalidad
+                                de un sistema operativo en un clúster heterogéneo. ROS se desarrolló originalmente en
+                                2007 bajo el nombre de switchyard por el Laboratorio de Inteligencia Artificial de
+                                Stanford para dar soporte al proyecto del Robot con Inteligencia Artificial de Stanford
+                                (STAIR2​).
+
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div>
+                                <small class="text-muted">9 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="{% static 'polls/images/angular.jpg' %}" width="100%" height="225"
+                             class="card-img-top">
+
+                        <div class="card-body">
+                            <p class="card-text">
+                                <a href="https://angular.io/start">Angular</a>
+                                This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div>
+                                <small class="text-muted">9 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="{% static 'polls/images/django.png' %}" width="100%" height="225"
+                             class="card-img-top">
+
+                        <div class="card-body">
+                            <p class="card-text">
+                                <a href="https://www.djangoproject.com/">Django</a>
+                                This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div>
+                                <small class="text-muted">9 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="{% static 'polls/images/odoo.png' %}" width="100%" height="225"
+                             class="card-img-top">
+
+                        <div class="card-body">
+                            <p class="card-text">
+                                <a href="https://www.odoo.com/es_ES/">Odoo</a>
+                                es un software de ERP integrado. Cuenta con una versión "comunitaria" de código abierto
+                                bajo licencia LGPLv3 y una versión empresarial bajo licencia comercial que complementa
+                                la edición comunitaria con características y servicios comerciales y desarrollada por la
+                                empresa belga Odoo S.A. </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div>
+                                <small class="text-muted">9 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="{% static 'polls/images/tensorflow.png' %}" width="100%" height="225"
+                             class="card-img-top">
+
+                        <div class="card-body">
+                            <p class="card-text">
+                                <a href="https://www.tensorflow.org/">Tensor Flow</a>
+                                This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div>
+                                <small class="text-muted">9 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="{% static 'polls/images/html.png' %}" width="100%" height="225"
+                             class="card-img-top">
+
+                        <div class="card-body">
+                            <p class="card-text">
+                                <a href="https://html.spec.whatwg.org/multipage/">HTML</a>
+                                HTML, siglas en inglés de HyperText Markup Language (‘lenguaje de marcas de
+                                hipertexto’), hace referencia al lenguaje de marcado para la elaboración de páginas web.
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div>
+                                <small class="text-muted">9 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="{% static 'polls/images/mysql.jpg' %}" width="100%" height="225"
+                             class="card-img-top">
+
+                        <div class="card-body">
+                            <p class="card-text">
+                                <a href="https://www.mysql.com/">MySQL</a>
+                                es un sistema de gestión de bases de datos relacional desarrollado bajo licencia
+                                dual: Licencia pública general/Licencia comercial por Oracle Corporation y está
+                                considerada como la base de datos de código abierto más popular del mundo,1​2​ y una de
+                                las más populares en general junto a Oracle y Microsoft SQL Server, sobre todo para
+                                entornos de desarrollo web.
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div>
+                                <small class="text-muted">9 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <h1>Hardware</h1>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="{% static 'polls/images/ardu.jpg' %}" width="100%" height="225" class="card-img-top">
+
+                        <div class="card-body">
+                            <p class="card-text">
+                                <a href="https://www.arduino.cc/">Arduino</a>
+
+                                es una compañía de desarrollo de software y hardware libres, así como una
+                                comunidad internacional que diseña y manufactura placas de desarrollo de hardware para
+                                construir dispositivos digitales y dispositivos interactivos que puedan detectar y
+                                controlar objetos del mundo real.
+
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div>
+                                <small class="text-muted">9 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="{% static 'polls/images/Raspberry.jpg' %}" width="100%" height="225"
+                             class="card-img-top">
+
+                        <div class="card-body">
+                            <p class="card-text">
+                                <a href="https://www.raspberrypi.org/">Raspberry</a>
+                                Raspberry Pi es un ordenador de placa reducida, ordenador de placa única u ordenador de
+                                placa simple (SBC) de bajo costo desarrollado en el Reino Unido por la Raspberry Pi
+                                Foundation, con el objetivo de estimular la enseñanza de informática en las escuelas.
+
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div>
+                                <small class="text-muted">9 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="{% static 'polls/images/ultimarker.jpg' %}" width="100%" height="225"
+                             class="card-img-top">
+
+                        <div class="card-body">
+                            <p class="card-text">
+                                <a href="https://ultimaker.com/es/">Ultimaker</a>
+                                es una empresa holandesa creada en 2011 por Martijn Elserman, Erik de Bruijn y
+                                Siert Wijnia. Sus orígenes se remontan al movimiento RepRap, Siert Wijnia organizaba
+                                talleres para montar la impresora 3d Darwin.
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div>
+                                <small class="text-muted">9 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="{% static 'polls/images/boston.jpg' %}" width="100%" height="225"
+                             class="card-img-top">
+
+                        <div class="card-body">
+                            <p class="card-text">
+                                <a href="https://www.bostondynamics.com/">Boston Dynamics</a>
+                                es una empresa de ingeniería y robótica que se especializa en la
+                                construcción de robots. En diciembre de 2013 fue comprada por Google. En junio
+                                de 2017 fue comprada por la empresa japonesa SoftBank.
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div>
+                                <small class="text-muted">9 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="{% static 'polls/images/xilinx.jpg' %}" width="100%" height="225"
+                             class="card-img-top">
+
+                        <div class="card-body">
+                            <p class="card-text">
+                                <a href="https://www.xilinx.com/">Xilinx, Inc.</a>
+                                es una compañía de tecnología estadounidense, primeramente es un
+                                distribuidor de dispositivos lógicos programables. Es reconocida por inventar los FPGA
+                                (del inglés Field Programmable Gate Array) y también por ser la primera compañía con
+                                modelos de manufactura fabless.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div>
+                                <small class="text-muted">9 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <h1>Redes</h1>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="{% static 'polls/images/cisco.jpg' %}" width="100%" height="225" class="card-img-top">
+
+                        <div class="card-body">
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer. sad sa d saa natural lead-in to
+                                additional content. This content is a little bit longer. sad sa d saa natural lead-in to
+                                additional content. This content is a little bit longer. sad sa d saa natural lead-in to
+                                additional content. This content is a little bit longer. sad sa d
+
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div>
+                                <small class="text-muted">9 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="{% static 'polls/images/lora.png' %}" width="100%" height="225" class="card-img-top">
+
+                        <div class="card-body">
+                            <p class="card-text">
+                                <a href="https://lora-alliance.org/">LoRa</a>
+                                es una tecnología inalámbrica al igual que WiFi, Bluetooth, LTE, SigFox o Zigbee.
+                                LoRa utiliza un tipo de modulación en radiofrecuencia, como la AM o la FM o el PSK; pero
+                                patentado por Semtech una importante empresa fabricante de chips de radio.
+
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div>
+                                <small class="text-muted">9 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<footer class="text-muted">
+    <div class="container">
+        <p class="float-right">
+            <a href="#">Back to top</a>
+        </p>
+        <p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
+        <p>New to Bootstrap? <a href="{{ site.url }}/">Visit the homepage</a> or read our <a
+                href="{{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/introduction/">getting started
+            guide</a>.</p>
+    </div>
+</footer>
+
+
+{% endblock %}

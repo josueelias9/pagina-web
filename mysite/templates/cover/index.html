@@ -1,0 +1,51 @@
+{% extends "home.html" %}
+{% load static %}
+
+{% block css %}<link rel="stylesheet" href="{% static 'polls/bootstrap/cover/cover.css' %}">{% endblock %}
+
+
+{% block hola %}
+<body class="text-center">
+<!--
+---
+layout: examples
+title: Cover Template
+extra_css: "cover.css"
+body_class: "text-center"
+include_js: false
+---
+-->
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header class="masthead mb-auto">
+        <div class="inner">
+            <h3 class="masthead-brand">Automation</h3>
+            <nav class="nav nav-masthead justify-content-center">
+                <a class="nav-link active" href="#">Home</a>
+                <a class="nav-link" href="#">Features</a>
+                <a class="nav-link" href="#">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main role="main" class="inner cover">
+        <h1 class="cover-heading">Conocenos</h1>
+        <p class="lead">De acuerdo al diccionario de la Oxford, automation es "the use of machines and computers to do
+            work that was previously done by people". Somos la empresa mas grande del mundo dedicada a la automatizacion
+            de eventos.</p>
+        <p class="lead">
+            <a href="{% url 'polls:carousel' %}" class="btn btn-lg btn-secondary">entrar</a>
+
+        </p>
+    </main>
+
+    <footer class="mastfoot mt-auto">
+        <div class="inner">
+            <p>Cover template for <a href="https://getbootstrap.com/">Automation</a>, by <a
+                    href="https://www.facebook.com/">Josue</a>.</p>
+
+        </div>
+    </footer>
+</div>
+
+
+{% endblock %}
